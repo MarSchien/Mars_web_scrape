@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mars by Mar S</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+  <div class="container">
+
+    <div class="jumbotron text-center">
+      <h1>Mars by Mar.S</h1>
+      <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Collect New Mars Data</a></p>
+    </div>
+
+    
+    <div class='row'>
+      <div class="col-md-12">
+        <h2 class="heading">Latest Mars News</h2>
+        <h3>{{data['latest_news_title']}}</h3>
+        <p>{{data['latest_news_paragraph']}}</p>
+      </div>
+    </div>
+
+    <div class='row'>
+      <div class="col-md-12">
+        <h2 class="heading">Latest Image</h2>
+        <img src={{data['latest_image']}} >
+      </div>
+    </div>
+
+    <div class='row'>
+      <div class="col-md-6">
+        <h2 class="heading">Weather</h2>
+        <div> {{data['mars_weather']}}</div>
+      </div>
+
+     <div class="col-md-6">
+        <h2 class="heading">Measurements</h2>
+        <p>{{data['table'] |safe}}}</p>
+     </div>
+
+  </div>
+</body>
+
+</html> 
